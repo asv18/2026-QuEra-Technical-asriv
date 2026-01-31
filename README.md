@@ -4,10 +4,10 @@
 
 So you fancy taking on QuEra's technical challenge for iQuHack 2026?! We welcome you with open arms!
 
-Here you will learn all the details about the challenge, and needed to operate QuEra resources for iQuHack 2026. 
-
+Here you will learn all the details about the challenge, and needed to operate QuEra resources for iQuHack 2026.
 
 ## Contents
+
 This repo contains everything you need to get going. Mainly:
 
 - [`challenge.md`](challenge.md) contains the challenge statement, with directions and guidelines
@@ -16,21 +16,22 @@ This repo contains everything you need to get going. Mainly:
   - images of interest that summarize the circuits you will be studying
   - a cheat sheet with methods and processes in Bloqade you may find useful
 - [`project.toml`](project.toml) is a configurational file from which you can easily recover all packages needed for the challenge, in their correct version
-  
 
 ## Coding Infrastructure
 
-This challenge will get you started with basic knowledge to use QuEra's upcoming gate-based, error-correction-focused, hardware. For so, you will be operating on our SDK [Bloqade](https://bloqade.quera.com/latest/digital/), using efficient libraries for the simulation of stabilizer circuits like Stim and our recently launched library [Tsim](https://queracomputing.github.io/tsim/dev/). 
+This challenge will get you started with basic knowledge to use QuEra's upcoming gate-based, error-correction-focused, hardware. For so, you will be operating on our SDK [Bloqade](https://bloqade.quera.com/latest/digital/), using efficient libraries for the simulation of stabilizer circuits like Stim and our recently launched library [Tsim](https://queracomputing.github.io/tsim/dev/).
 
 To get the minimal packages installed all you have to do is make use of [`project.toml`](project.toml) as follows:
-
 
 ### Setup (Python + `uv`)
 
 **1) Install `uv`**
+
 - **macOS / Linux:**
   ```bash
   curl -LsSf https://astral.sh/uv/install.sh | sh
+
+  ```
 
 * **Windows (PowerShell):**
   ```powershell
@@ -38,6 +39,7 @@ To get the minimal packages installed all you have to do is make use of [`projec
   ```
 
 Verify:
+
 ```bash
 uv --version
 ```
@@ -55,8 +57,7 @@ source .venv/bin/activate    # macOS/Linux
 
 ```
 
-With the above, you can just create python scripts and notebooks for your solution and run from the same folder where your new environment is. You will have the minimal infrastructure with which we can guarantee you can create meaningful solutions to the challenge! Still, you are welcome to bring other packages and software of your interest, if they can help you with your unique solutions! 
-
+With the above, you can just create python scripts and notebooks for your solution and run from the same folder where your new environment is. You will have the minimal infrastructure with which we can guarantee you can create meaningful solutions to the challenge! Still, you are welcome to bring other packages and software of your interest, if they can help you with your unique solutions!
 
 ## Resource Availability and Code of Conduct
 
@@ -69,17 +70,16 @@ There is no access to quantum hardware for this challenge. The challenge is desi
 
 We encourage you pay particular attention to using Tsim, as you have early access to it here at this iQuHack challenge! Tsim is QuEra's new efficient backend sampler for circuits with Pauli noise and small amounts of magic. Like Stim, Tsim is based on stabilizer formalism to achieve ultimate speed and volume capacity. With Tsim, you can have access to better circuit plotting capabilities, more flexibility to deal with encoding rounding errors. But above everything, you can add small amounts of magic (like T gates) to the circuit while still being able to perform simulations with tens and tens of qubits! This should give you a lot of flexibility to explore different phenomena in your solutions.
 
-
 ## Documentation
 
 This year’s iQuHACK challenges require a write-up/documentation portion that is heavily considered during judging. The write-up is a chance for you to be creative in describing your approach and describing your process, as well as presenting the performance of your solutions. It should clearly explain the problem, the approaches you used, and your implementation with results.
 
 Make sure to clearly link the documentation into the `README.md` of your own solutions folder and to include a link to the original challenge repository from the documentation!
 
-
 ## Submission
 
 To submit the challenge, do the following:
+
 1. Place all the code you wrote in one folder with your team name under the `team_solutions/` folder (for example `team_solutions/quantum_team`).
 2. Create a new entry in `team_solutions.md` with your solution and your documentation. Your solution shuold contain a python script that runs your solution and  a `.pdf` of your presentation slides. Make sure to add an updated TOML file in case you are using extra packages needed to run your solution.
 3. Create a Pull Request from your repository to the original challenge repository
